@@ -1,6 +1,5 @@
 
-#include "Scene.h"
-
+#include "SceneManager.h"
 /* TODO : Create a scene class
 		/////SCENE /////
 		main functions
@@ -23,7 +22,10 @@ int main()
 {
 	std::cout << "syntax is your friend" << std::endl;
 
-	std::cin.get();
+	
+	Scene* testScene = new Scene();
+
+	SceneManager::getInstance()->runwithscene(testScene);
 
 }
 

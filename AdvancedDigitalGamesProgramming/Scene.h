@@ -6,14 +6,15 @@ enum  SceneState{RUNNING, PAUSED, DESTROY};
 
 class Scene{
 public:
-	Scene();
+	Scene(); //constructor
 		
 	
-	void init();
-	void run();
-
+	virtual void init();
+	virtual void run();
+	virtual void cleanup();
+	 ~Scene(); //deconstructor
 	
-private:
+protected:
 	bool initCompleted;
 	SceneState thisSceneState; 
 };
