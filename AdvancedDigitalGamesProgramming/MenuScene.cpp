@@ -12,15 +12,16 @@ void MenuScene::run()
 	{
 		init();
 	}
+	thisSceneState = RUNNING;
 
-	int lifetimeofscene = 20;
+	int lifetimeofscene = 2000;
 
 	while(thisSceneState == RUNNING)
 	{
-		std::cout << "Menu Scene Running!";
+		std::cout << "Menu Scene Running!" << std::endl;
 		lifetimeofscene--;
 		if(lifetimeofscene <1)
-			thisSceneState == DESTROY;
+			thisSceneState = DESTROY;
 	}
 	Scene* nextScene = new Scene();
 	SceneManager::getInstance()->runwithscene(nextScene);

@@ -38,6 +38,6 @@ void SceneManager::runwithscene(Scene* scene)
 	
 	currentRunningScene = scene;
 
-	scene->run();
+	currentRunningScene->run();
 }
 

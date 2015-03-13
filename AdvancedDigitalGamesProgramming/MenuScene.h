@@ -6,10 +6,10 @@
 class MenuScene : public  Scene
 {
 public:
-	MenuScene();
+	MenuScene(){init();}
 	virtual void init();
 	virtual void run();
-	~MenuScene();
+	~MenuScene(){}
 private:
 
 };
